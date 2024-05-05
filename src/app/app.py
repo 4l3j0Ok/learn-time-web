@@ -1,12 +1,16 @@
 import reflex as rx
-from .views.langs import langs
+from .views.header import header
+
+from .views.langs import langs, devops
 from .styles import common
 
 
 @rx.page("/")
-def index():
+def index() -> rx.Component:
     return rx.box(
+        header(),
         langs(),
+        devops(),
     )
 
 
