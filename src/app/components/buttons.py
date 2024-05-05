@@ -1,5 +1,4 @@
 import reflex as rx
-import os
 from .react.icons import iconify
 from app.styles import common
 
