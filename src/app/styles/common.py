@@ -16,12 +16,15 @@ BASE = {
         "font_family": Font.Default.value,
         "margin_y": "2em",
     },
+    rx.grid: {
+        "place_items": "center",
+    },
 }
 
 
 LANG_ICON = {
-    "width": "100%",
-    "height": "100%",
+    "width": "5em",
+    "height": "5em",
     "background_color": "orange",
     "color": "white",
     "border_radius": "50%",
@@ -33,4 +36,11 @@ LANG_ICON = {
         "color": "orange",
     },
     "transition": ".3s ease-in-out",
+}
+
+ELEMENTS_GRID = {
+    "width": "75vw",
+    "flex_wrap": "wrap",
+    "gap": "2em",
+    "justify_content": "center",
 }
