@@ -39,8 +39,26 @@ LANG_ICON = {
 }
 
 ELEMENTS_GRID = {
-    "width": "75vw",
+    "width": "50vw",
     "flex_wrap": "wrap",
     "gap": "2em",
     "justify_content": "center",
+}
+
+HEADER_STYLE = {
+    "text_align": "center",
+    "margin_y": "2em",
+    "rx_heading": {
+        "font_size": "5em",
+        "margin_y": ".25em",
+    },
+}
+
+SEARCH_BAR = {
+    "width": "50vw",
+    "margin_top": "2em",
+    "rx_input": {
+        "font_size": "1em",
+        "padding": "2em",
+    },
 }

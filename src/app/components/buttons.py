@@ -20,10 +20,12 @@ class Button(rx.ComponentState):
         return rx.grid(
             rx.dialog.root(
                 rx.dialog.trigger(
-                    iconify(
-                        icon,
-                        style=common.LANG_ICON,
-                        on_click=cls.toggle,
+                    rx.box(
+                        iconify(
+                            icon,
+                            style=common.LANG_ICON,
+                            on_click=cls.toggle,
+                        ),
                     )
                 ),
                 rx.dialog.content(rx.markdown(md_content)),
@@ -32,4 +34,5 @@ class Button(rx.ComponentState):
                 title,
                 margin_top=".25em",
             ),
+            place_items="center",
         )
