@@ -1,0 +1,32 @@
+services:
+  backend:
+    image: alejoide/learn-time-web:latest
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: learn-time-backend
+    env_file:
+      - config/
+    volumes:
+      - static:/app/src/.web/_static
+    networks:
+      - default
+
+  frontend:
+    image: nginx:latest
+    container_name: learn-time-frontend
+    volumes:
+      - static:/usr/share/nginx/html
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - nginx-proxy
+      - default
+
+volumes:
+  static:
+    name: learn-time-static
+
+networks:
+  nginx-proxy:
+    name: nginx-proxy
+    external: true
