@@ -13,6 +13,8 @@ services:
   frontend:
     image: nginx:latest
     container_name: learn-time-frontend
+    depends_on:
+      - backend
     ports:
       - 80:80
     volumes:
