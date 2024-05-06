@@ -1,19 +1,8 @@
 import reflex as rx
-from .views.header import header
-from .views.elements import langs, devops, more_soon
-from .views.footer import footer
+import app.pages
 from .styles import common
-
-
-@rx.page("/", title="Learn Time by Alejoide")
-def index() -> rx.Component:
-    return (
-        header(),
-        langs(),
-        devops(),
-        more_soon(),
-        footer(),
-    )
+from app.pages import index
+from app.pages.not_found import not_found
 
 
 app = rx.App(
@@ -26,3 +15,4 @@ app = rx.App(
     stylesheets=common.STYLESHEETS,
     style=common.BASE,
 )
+app.add_custom_404_page(not_found(), title="Página no encontrada")

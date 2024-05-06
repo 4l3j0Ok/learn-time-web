@@ -44,12 +44,26 @@ ANIMATIONS = {
     "zoom_in": "animate__animated animate__zoomIn animate__faster",
 }
 
+BUTTON = {
+    "background_color": Palette.accent.value,
+    "color": Palette.white.value,
+    "padding": "1em",
+    "overflow": "visible",
+    "cursor": "pointer",
+    "border_radius": "2em",
+    ":hover": {
+        "background_color": Palette.white.value,
+        "color": Palette.accent.value,
+    },
+    "transition": ".3s ease-in-out",
+}
+
 LANG_ICON = {
     "width": "5em",
     "height": "5em",
+    "border_radius": "50%",
     "background_color": Palette.accent.value,
     "color": Palette.white.value,
-    "border_radius": "50%",
     "padding": "1em",
     "overflow": "visible",
     "cursor": "pointer",
