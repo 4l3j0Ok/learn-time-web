@@ -2,5 +2,5 @@
 *.py[cod]
 src/.web
 __pycache__/
-.env
+*.env
 Pipfile.lock
