@@ -4,6 +4,7 @@ from .fonts import Font
 
 STYLESHEETS = [
     f"https://fonts.googleapis.com/css2?family={Font.Default.value}:ital,wght@0,100..900;1,100..900&display=swap",
+    "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
 ]
 
 BASE = {
@@ -21,6 +22,9 @@ BASE = {
     },
 }
 
+ANIMATIONS = {
+    "zoom_in": "animate__animated animate__zoomIn animate__faster",
+}
 
 LANG_ICON = {
     "width": "5em",
@@ -61,4 +65,10 @@ SEARCH_BAR = {
         "font_size": "1em",
         "padding": "2em",
     },
+}
+
+FOOTER = {
+    "width": "100%",
+    "margin_top": "8em",
+    "margin_bottom": "2em",
 }

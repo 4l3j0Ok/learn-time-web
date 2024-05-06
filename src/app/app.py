@@ -1,6 +1,7 @@
 import reflex as rx
 from .views.header import header
 from .views.langs import langs, devops
+from .views.footer import footer
 from .styles import common
 
 
@@ -10,14 +11,11 @@ def index() -> rx.Component:
         header(),
         langs(),
         devops(),
+        footer(),
     )
 
 
 app = rx.App(
-    theme=rx.theme(
-        accent_color="orange",
-        has_background_color=True,
-    ),
     stylesheets=common.STYLESHEETS,
     style=common.BASE,
 )

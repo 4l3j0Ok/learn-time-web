@@ -34,5 +34,6 @@ class Button(rx.ComponentState):
                 title,
                 margin_top=".25em",
             ),
+            class_name=common.ANIMATIONS["zoom_in"],
             place_items="center",
         )
