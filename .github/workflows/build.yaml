@@ -26,7 +26,7 @@ jobs:
           tags: |
             type=semver,pattern={{version}}
           images: |
-            alejoide/my-links-web
+            alejoide/learn-time-web
       -
         name: Build and push to Docker Hub
         uses: docker/build-push-action@v5
