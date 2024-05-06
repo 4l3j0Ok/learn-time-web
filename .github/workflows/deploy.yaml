@@ -1,0 +1,40 @@
+name: deploy
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["build"]
+    types:
+      - completed
+  push:
+    branches:
+      - main
+    paths:
+      - 'stack/**'
+
+jobs:
+  deploy:
+    name: Deploy to production
+    runs-on: self-hosted
+    environment: prod
+    steps:
+    -
+      name: Checkout
+      uses: actions/checkout@master
+    -
+      name: Set up Stack
+      run: |
+        mkdir -p $PROJECT_PATH
+        mkdir -p $PROJECT_PATH/config
+        cp -f ./stack/prod.compose.yml $PROJECT_PATH/docker-compose.yml
+        cp -f ./stack/config/nginx.conf $PROJECT_PATH/config/nginx.conf
+        mkdir -p $PROJECT_PATH/config
+        echo "$FRONTEND_ENV_CONTENT" > $PROJECT_PATH/config/.frontend.env
+      env:
+        PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
+    -
+      name: Pull changes and restart
+      run: |
+        cd ${{ secrets.PROJECT_PATH }}
+        docker compose down --volumes --remove-orphans
+        docker compose pull
+        docker compose up -d
