@@ -2,8 +2,6 @@ services:
   backend:
     image: alejoide/learn-time-web:latest
     container_name: learn-time-backend
-    env_file:
-      - config/
     volumes:
       - static:/app/src/.web/_static
     networks:
