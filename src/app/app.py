@@ -5,7 +5,7 @@ from .views.footer import footer
 from .styles import common
 
 
-@rx.page("/")
+@rx.page("/", title="Learn Time by Alejoide")
 def index() -> rx.Component:
     return (
         header(),
