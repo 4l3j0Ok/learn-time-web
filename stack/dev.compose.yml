@@ -4,7 +4,7 @@ services:
     build:
       context: ..
       dockerfile: Dockerfile
-      build_args:
+      args:
         - API_URL=http://localhost:80
     container_name: learn-time-backend
     volumes:
