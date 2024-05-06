@@ -1,9 +1,6 @@
 services:
   backend:
     image: alejoide/learn-time-web:latest
-    build:
-      context: ..
-      dockerfile: Dockerfile
     container_name: learn-time-backend
     env_file:
       - config/
