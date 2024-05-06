@@ -10,7 +10,7 @@ class App(Enum):
     name = "Learn Time"
     author = "Alejo Sarmiento"
     version = "v1"
-    url = os.getenv("APP_URL", "https://links.alejoide.com")
+    url = os.getenv("APP_URL", "https://learn.alejoide.com")
 
 
 class Default(Enum):
@@ -100,7 +100,7 @@ class Languages(Enum):
 
 
 class DevOps(Enum):
-    title = "DevOps"
+    title = "Infraestructura y DevOps"
     md_dir = "devops"
     items = {
         "git": {

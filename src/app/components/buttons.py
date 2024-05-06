@@ -28,7 +28,13 @@ class Button(rx.ComponentState):
                         ),
                     )
                 ),
-                rx.dialog.content(rx.markdown(md_content)),
+                rx.dialog.content(
+                    rx.markdown(
+                        md_content,
+                        component_map=common.MD_COMPONENT_MAP,
+                    ),
+                    style=common.BASE[rx.dialog.content],
+                ),
             ),
             rx.text(
                 title,

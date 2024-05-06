@@ -1,5 +1,6 @@
 import reflex as rx
 from .fonts import Font
+from .colors import Palette
 
 
 STYLESHEETS = [
@@ -8,10 +9,19 @@ STYLESHEETS = [
 ]
 
 BASE = {
+    "display": "flex",
+    "flex_direction": "column",
+    "min_height": "100vh",
+    "background_color": Palette.background.value,
+    "color": Palette.white.value,
     "font_family": Font.Default.value,
-    rx.markdown: {
+    rx.text: {
+        "color": Palette.white.value,
         "font_family": Font.Default.value,
-        "h1, h2, h3, h4, h5, h6": {Font.Default.value},
+    },
+    rx.dialog.content: {
+        "background_color": Palette.background.value,
+        "color": Palette.white.value,
     },
     rx.heading: {
         "font_family": Font.Default.value,
@@ -19,6 +29,14 @@ BASE = {
     },
     rx.grid: {
         "place_items": "center",
+    },
+    rx.link: {
+        "color": Palette.accent.value,
+        "text_decoration": "none",
+        ":hover": {
+            "color": Palette.white.value,
+        },
+        "transition": ".3s ease-in-out",
     },
 }
 
@@ -29,15 +47,15 @@ ANIMATIONS = {
 LANG_ICON = {
     "width": "5em",
     "height": "5em",
-    "background_color": "orange",
-    "color": "white",
+    "background_color": Palette.accent.value,
+    "color": Palette.white.value,
     "border_radius": "50%",
     "padding": "1em",
     "overflow": "visible",
     "cursor": "pointer",
     ":hover": {
-        "background_color": "white",
-        "color": "orange",
+        "background_color": Palette.white.value,
+        "color": Palette.accent.value,
     },
     "transition": ".3s ease-in-out",
 }
@@ -51,7 +69,8 @@ ELEMENTS_GRID = {
 
 HEADER_STYLE = {
     "text_align": "center",
-    "margin_y": "2em",
+    "margin_top": "5em",
+    "margin_bottom": "2em",
     "rx_heading": {
         "font_size": "5em",
         "margin_y": ".25em",
@@ -64,11 +83,59 @@ SEARCH_BAR = {
     "rx_input": {
         "font_size": "1em",
         "padding": "2em",
+        "color": Palette.white.value,
     },
 }
 
 FOOTER = {
-    "width": "100%",
-    "margin_top": "8em",
-    "margin_bottom": "2em",
+    "padding": "10em 0 2em 0",
+    "margin_top": "auto",
+    "logo": {
+        "width": "15em",
+        "height": "auto",
+        "margin_bottom": "1em",
+    },
+}
+
+MD_COMPONENT_MAP = {
+    "p": lambda text: rx.text(
+        text,
+        style=BASE[rx.text],
+    ),
+    "h1": lambda text: rx.heading(
+        text,
+        size="6",
+        style=BASE[rx.heading],
+        margin_y="1em",
+    ),
+    "h2": lambda text: rx.heading(
+        text,
+        size="5",
+        style=BASE[rx.heading],
+        margin_y="1em",
+    ),
+    "h3": lambda text: rx.heading(
+        text,
+        size="4",
+        style=BASE[rx.heading],
+        margin_y="1em",
+    ),
+    "h4": lambda text: rx.heading(
+        text,
+        size="3",
+        style=BASE[rx.heading],
+        margin_y="1em",
+    ),
+    "h5": lambda text: rx.heading(
+        text,
+        size="2",
+        style=BASE[rx.heading],
+        margin_y="1em",
+    ),
+    "h6": lambda text: rx.heading(
+        text,
+        size="1",
+        style=BASE[rx.heading],
+        margin_y="1em",
+    ),
 }

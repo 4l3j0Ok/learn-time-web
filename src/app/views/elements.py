@@ -58,3 +58,9 @@ def devops() -> rx.Component:
             ),
         ),
     )
+
+
+def more_soon() -> rx.Component:
+    return rx.center(
+        rx.heading("Más próximamente..."),
+    )
