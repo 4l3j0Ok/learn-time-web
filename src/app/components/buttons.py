@@ -20,12 +20,18 @@ def button(element: rx.Var) -> rx.Component:
                 rx.box(
                     iconify(
                         icon,
-                        style=common.LANG_ICON,
+                        style=common.LANG_BUTTON,
                         on_click=ButtonState.toggle,
                     ),
                 )
             ),
             rx.dialog.content(
+                rx.dialog.close(
+                    iconify(
+                        "carbon:close-filled",
+                    ),
+                    style=common.CLOSE_BUTTON,
+                ),
                 rx.markdown(
                     md_content,
                     component_map=common.MD_COMPONENT_MAP,

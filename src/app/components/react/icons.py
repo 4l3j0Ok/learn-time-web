@@ -17,5 +17,7 @@ class Iconify(rx.Component):
 
 def iconify(icon: str, **args) -> rx.text:
     return Iconify().create(
-        icon, display="inline-block", vertical_align="middle", **args
+        icon,
+        vertical_align="middle",
+        **args,
     )

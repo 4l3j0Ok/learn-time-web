@@ -58,7 +58,7 @@ BUTTON = {
     "transition": ".3s ease-in-out",
 }
 
-LANG_ICON = {
+LANG_BUTTON = {
     "width": "5em",
     "height": "5em",
     "border_radius": "50%",
@@ -70,6 +70,24 @@ LANG_ICON = {
     ":hover": {
         "background_color": Palette.white.value,
         "color": Palette.accent.value,
+    },
+    "transition": ".3s ease-in-out",
+}
+
+CLOSE_BUTTON = {
+    "height": "2em",
+    "width": "max-content",
+    "position": "sticky",
+    "top": "1em",
+    "margin-left": "auto",
+    "background_color": Palette.white.value,
+    "color": Palette.accent.value,
+    "overflow": "visible",
+    "cursor": "pointer",
+    "border_radius": "2em",
+    ":hover": {
+        "background_color": Palette.accent.value,
+        "color": Palette.white.value,
     },
     "transition": ".3s ease-in-out",
 }

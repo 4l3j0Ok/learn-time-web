@@ -12,7 +12,7 @@ def footer() -> rx.Component:
             f"2024 - {date.today().year}"
             if date.today().year > 2024
             else "2024" + " © ",
-            rx.link(f"{App.name.value}, by {App.author.value}", href=App.url.value),
+            rx.link(f"{App.name.value} by {App.author.value}", href=App.url.value),
             " v1.",
             margin_bottom=".5em",
         ),
