@@ -24,5 +24,5 @@ Web desarrollada con [Reflex](https://reflex.dev) que disponibiliza una introduc
 
 La página principal muestra una lista de lenguajes y tecnologías, al hacer clic en uno de ellos se muestra una descripción y un enlace a la documentación oficial.
 
-Puedes ver la página en [learn-time.alejoide.com](https://learn-time.alejoide.com/).
+Puedes ver la página en [learn.alejoide.com](https://learn.alejoide.com/).
 
