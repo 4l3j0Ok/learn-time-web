@@ -30,7 +30,6 @@ jobs:
         mkdir -p $PROJECT_PATH/config
       env:
         PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
-        API_URL: ${{ secrets.API_URL }}
     -
       name: Pull changes and restart
       run: |
