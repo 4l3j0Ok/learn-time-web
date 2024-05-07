@@ -1,5 +1,5 @@
 import reflex as rx
-from app.components.buttons import Button
+from app.components.buttons import button
 from app.styles.common import ELEMENTS_GRID
 from app.modules.constants import Languages, DevOps
 
@@ -31,7 +31,7 @@ def langs() -> rx.Component:
             rx.flex(
                 rx.foreach(
                     ElementsState.langs_elements,
-                    lambda element: Button.create(element),
+                    lambda element: button(element),
                 ),
                 style=ELEMENTS_GRID,
             ),
@@ -48,7 +48,7 @@ def devops() -> rx.Component:
                 rx.foreach(
                     ElementsState.devops_elements,
                     lambda element: rx.box(
-                        Button.create(
+                        button(
                             element,
                             **DevOps.items.value.get(f"{element}", {}),
                         )

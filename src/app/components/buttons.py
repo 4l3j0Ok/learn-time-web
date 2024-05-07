@@ -3,43 +3,40 @@ from .react.icons import iconify
 from app.styles import common
 
 
-class Button(rx.ComponentState):
+class ButtonState(rx.State):
     clicked: bool = False
 
     def toggle(self):
         self.clicked = not self.clicked
 
-    @classmethod
-    def get_component(
-        cls,
-        element: rx.Var,
-    ) -> rx.Component:
-        title = element["title"]
-        icon = element["icon"]
-        md_content = element["content"]
-        return rx.grid(
-            rx.dialog.root(
-                rx.dialog.trigger(
-                    rx.box(
-                        iconify(
-                            icon,
-                            style=common.LANG_ICON,
-                            on_click=cls.toggle,
-                        ),
-                    )
-                ),
-                rx.dialog.content(
-                    rx.markdown(
-                        md_content,
-                        component_map=common.MD_COMPONENT_MAP,
+
+def button(element: rx.Var) -> rx.Component:
+    title = element["title"]
+    icon = element["icon"]
+    md_content = element["content"]
+    return rx.grid(
+        rx.dialog.root(
+            rx.dialog.trigger(
+                rx.box(
+                    iconify(
+                        icon,
+                        style=common.LANG_ICON,
+                        on_click=ButtonState.toggle,
                     ),
-                    style=common.BASE[rx.dialog.content],
+                )
+            ),
+            rx.dialog.content(
+                rx.markdown(
+                    md_content,
+                    component_map=common.MD_COMPONENT_MAP,
                 ),
+                style=common.BASE[rx.dialog.content],
             ),
-            rx.text(
-                title,
-                margin_top=".25em",
-            ),
-            class_name=common.ANIMATIONS["zoom_in"],
-            place_items="center",
-        )
+        ),
+        rx.text(
+            title,
+            margin_top=".25em",
+        ),
+        class_name=common.ANIMATIONS["zoom_in"],
+        place_items="center",
+    )
