@@ -75,7 +75,7 @@ LANG_ICON = {
 }
 
 ELEMENTS_GRID = {
-    "width": ["75vw", "50vw"],
+    "width": ["80vw", "50vw"],
     "flex_wrap": "wrap",
     "gap": "2em",
     "justify_content": "center",
@@ -93,7 +93,7 @@ HEADER_STYLE = {
 
 SEARCH_BAR = {
     "width": "100%",
-    "max_width": ["75vw", "50vw"],
+    "max_width": ["80vw", "50vw"],
     "margin_top": "2em",
     "rx_input": {
         "text_align": "center",
