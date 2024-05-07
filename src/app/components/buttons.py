@@ -3,13 +3,6 @@ from .react.icons import iconify
 from app.styles import common
 
 
-class ButtonState(rx.State):
-    clicked: bool = False
-
-    def toggle(self):
-        self.clicked = not self.clicked
-
-
 def button(element: rx.Var) -> rx.Component:
     title = element["title"]
     icon = element["icon"]
@@ -17,20 +10,17 @@ def button(element: rx.Var) -> rx.Component:
     return rx.grid(
         rx.dialog.root(
             rx.dialog.trigger(
-                rx.box(
-                    iconify(
-                        icon,
-                        style=common.LANG_BUTTON,
-                        on_click=ButtonState.toggle,
-                    ),
+                iconify(
+                    icon,
+                    style=common.LANG_BUTTON,
                 )
             ),
             rx.dialog.content(
                 rx.dialog.close(
                     iconify(
                         "carbon:close-filled",
+                        style=common.CLOSE_BUTTON,
                     ),
-                    style=common.CLOSE_BUTTON,
                 ),
                 rx.markdown(
                     md_content,
