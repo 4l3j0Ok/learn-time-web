@@ -75,7 +75,7 @@ LANG_ICON = {
 }
 
 ELEMENTS_GRID = {
-    "width": "50vw",
+    "width": ["75vw", "50vw"],
     "flex_wrap": "wrap",
     "gap": "2em",
     "justify_content": "center",
@@ -86,15 +86,17 @@ HEADER_STYLE = {
     "margin_top": "5em",
     "margin_bottom": "2em",
     "rx_heading": {
-        "font_size": "5em",
+        "font_size": ["3em", "5em"],
         "margin_y": ".25em",
     },
 }
 
 SEARCH_BAR = {
-    "width": "50vw",
+    "width": "100%",
+    "max_width": ["75vw", "50vw"],
     "margin_top": "2em",
     "rx_input": {
+        "text_align": "center",
         "font_size": "1em",
         "padding": "2em",
         "color": Palette.white.value,
