@@ -5,7 +5,9 @@ services:
       context: ..
       dockerfile: Dockerfile
       args:
-        - API_URL=http://localhost:80
+        API_URL: http://localhost:80
+    env_file:
+      - ./config/.env
     container_name: learn-time-backend
     volumes:
       - static:/app/src/.web/_static

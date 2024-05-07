@@ -2,6 +2,7 @@ services:
   backend:
     image: alejoide/learn-time-web:latest
     container_name: learn-time-backend
+    restart: unless-stopped
     volumes:
       - static:/app/src/.web/_static
     networks:
@@ -10,6 +11,7 @@ services:
   frontend:
     image: nginx:latest
     container_name: learn-time-frontend
+    restart: unless-stopped
     volumes:
       - static:/usr/share/nginx/html
       - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
