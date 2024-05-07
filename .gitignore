@@ -4,3 +4,4 @@ src/.web
 __pycache__/
 *.env
 Pipfile.lock
+.vscode/
