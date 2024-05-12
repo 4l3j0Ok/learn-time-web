@@ -1,15 +1,8 @@
 import reflex as rx
-from app.views.header import header
-from app.views.technologies import langs, devops, more_soon
-from app.views.footer import footer
+from app.views.index import view
+from app.styles.common import ANIMATIONS
 
 
 @rx.page("/", title="Learn Time by Alejoide")
 def index() -> rx.Component:
-    return (
-        header(),
-        langs(),
-        devops(),
-        more_soon(),
-        footer(),
-    )
+    return rx.container(view(), class_name=ANIMATIONS.get("zoom_in"))

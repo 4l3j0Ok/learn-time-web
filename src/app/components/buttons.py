@@ -3,31 +3,14 @@ from .react.icons import iconify
 from app.styles import common
 
 
-def button(technology: rx.Var) -> rx.Component:
+def button(technology: rx.Var, as_link: bool = False) -> rx.Component:
     title = technology["title"]
     icon = technology["icon"]
-    md_content = technology["content"]
     return rx.grid(
-        rx.dialog.root(
-            rx.dialog.trigger(
-                iconify(
-                    icon,
-                    style=common.LANG_BUTTON,
-                )
-            ),
-            rx.dialog.content(
-                rx.dialog.close(
-                    iconify(
-                        "carbon:close-filled",
-                        style=common.CLOSE_BUTTON,
-                    ),
-                ),
-                rx.markdown(
-                    md_content,
-                    component_map=common.MD_COMPONENT_MAP,
-                ),
-                style=common.BASE[rx.dialog.content],
-            ),
+        iconify(
+            icon,
+            on_click=rx.redirect(technology["page"]) if as_link else None,
+            style=common.LANG_BUTTON,
         ),
         rx.text(
             title,

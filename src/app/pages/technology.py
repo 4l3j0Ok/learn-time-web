@@ -1,26 +1,16 @@
 import reflex as rx
-from app.views.header import header
-from app.modules.constants import Languages, DevOps
+from app.views.technology import view
 from app.pages.not_found import not_found
+from app.states import TechnologiesState
+from app.styles.common import ANIMATIONS
 
 
-class RouteState(rx.State):
-    @rx.var
-    def technology(self) -> str:
-        return self.router.page.params.get("technology")
-
-    @rx.var
-    def technologies(self) -> list:
-        technologies = []
-        technologies.extend(Languages.items.value.keys())
-        technologies.extend(DevOps.items.value.keys())
-        return technologies
-
-
-@rx.page("/[technology]")
-def index() -> rx.Component:
+@rx.page("/[technology]", title="Learn Time")
+def technology() -> rx.Component:
     return rx.cond(
-        RouteState.technologies.contains(RouteState.technology),
-        header(),
+        TechnologiesState.selected,
+        rx.container(
+            view(TechnologiesState.selected), class_name=ANIMATIONS.get("zoom_in")
+        ),
         not_found(),
     )

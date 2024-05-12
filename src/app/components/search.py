@@ -1,5 +1,5 @@
 import reflex as rx
-from app.views.technologies import TechnologiesState
+from app.states import TechnologiesState
 from app.styles.common import SEARCH_BAR
 
 

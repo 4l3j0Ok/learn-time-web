@@ -1,37 +1,46 @@
 import reflex as rx
 from app.components.buttons import button
-from app.styles.common import ELEMENTS_GRID
+from app.components.search import search_bar
+from app.styles.common import ELEMENTS_GRID, HEADER_STYLE
 from app.modules.constants import Languages, DevOps
+from app.states import TechnologiesState
+from app.views.footer import footer
 
 
-class TechnologiesState(rx.State):
-    user_filter: str = ""
-    langs_technologies: list[dict] = [item for item in Languages.items.value.values()]
-    devops_technologies: list[dict] = [item for item in DevOps.items.value.values()]
+def view() -> rx.Component:
+    return (
+        header(),
+        langs(),
+        devops(),
+        more_soon(),
+        footer(),
+    )
 
-    def set_technologies(self, value: str):
-        self.user_filter = value
-        self.langs_technologies = [
-            item
-            for item in Languages.items.value.values()
-            if value.lower() in item["title"].lower()
-        ]
-        self.devops_technologies = [
-            item
-            for item in DevOps.items.value.values()
-            if value.lower() in item["title"].lower()
-        ]
+
+def header() -> rx.Component:
+    return rx.grid(
+        rx.heading("Learn Time", style=HEADER_STYLE.get("rx_heading")),
+        rx.text(
+            "By ",
+            rx.link(
+                "Alejoide",
+                href="https://alejoide.com",
+            ),
+        ),
+        search_bar(),
+        style=HEADER_STYLE,
+    )
 
 
 def langs() -> rx.Component:
     return rx.cond(
-        TechnologiesState.langs_technologies,
+        TechnologiesState.langs,
         rx.grid(
             rx.heading(Languages.title.value),
             rx.flex(
                 rx.foreach(
-                    TechnologiesState.langs_technologies,
-                    lambda technology: button(technology),
+                    TechnologiesState.langs,
+                    lambda technology: button(technology, as_link=True),
                 ),
                 style=ELEMENTS_GRID,
             ),
@@ -41,12 +50,12 @@ def langs() -> rx.Component:
 
 def devops() -> rx.Component:
     return rx.cond(
-        TechnologiesState.devops_technologies,
+        TechnologiesState.devops,
         rx.grid(
             rx.heading(DevOps.title.value),
             rx.flex(
                 rx.foreach(
-                    TechnologiesState.devops_technologies,
+                    TechnologiesState.devops,
                     lambda technology: rx.box(
                         button(
                             technology,
