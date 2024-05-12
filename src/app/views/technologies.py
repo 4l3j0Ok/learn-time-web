@@ -4,19 +4,19 @@ from app.styles.common import ELEMENTS_GRID
 from app.modules.constants import Languages, DevOps
 
 
-class ElementsState(rx.State):
+class TechnologiesState(rx.State):
     user_filter: str = ""
-    langs_elements: list[dict] = [item for item in Languages.items.value.values()]
-    devops_elements: list[dict] = [item for item in DevOps.items.value.values()]
+    langs_technologies: list[dict] = [item for item in Languages.items.value.values()]
+    devops_technologies: list[dict] = [item for item in DevOps.items.value.values()]
 
-    def set_elements(self, value: str):
+    def set_technologies(self, value: str):
         self.user_filter = value
-        self.langs_elements = [
+        self.langs_technologies = [
             item
             for item in Languages.items.value.values()
             if value.lower() in item["title"].lower()
         ]
-        self.devops_elements = [
+        self.devops_technologies = [
             item
             for item in DevOps.items.value.values()
             if value.lower() in item["title"].lower()
@@ -25,13 +25,13 @@ class ElementsState(rx.State):
 
 def langs() -> rx.Component:
     return rx.cond(
-        ElementsState.langs_elements,
+        TechnologiesState.langs_technologies,
         rx.grid(
             rx.heading(Languages.title.value),
             rx.flex(
                 rx.foreach(
-                    ElementsState.langs_elements,
-                    lambda element: button(element),
+                    TechnologiesState.langs_technologies,
+                    lambda technology: button(technology),
                 ),
                 style=ELEMENTS_GRID,
             ),
@@ -41,16 +41,16 @@ def langs() -> rx.Component:
 
 def devops() -> rx.Component:
     return rx.cond(
-        ElementsState.devops_elements,
+        TechnologiesState.devops_technologies,
         rx.grid(
             rx.heading(DevOps.title.value),
             rx.flex(
                 rx.foreach(
-                    ElementsState.devops_elements,
-                    lambda element: rx.box(
+                    TechnologiesState.devops_technologies,
+                    lambda technology: rx.box(
                         button(
-                            element,
-                            **DevOps.items.value.get(f"{element}", {}),
+                            technology,
+                            **DevOps.items.value.get(f"{technology}", {}),
                         )
                     ),
                 ),

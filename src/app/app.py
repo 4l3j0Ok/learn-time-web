@@ -1,7 +1,7 @@
 import reflex as rx
 import app.pages
 from .styles import common
-from app.pages import index
+from app.pages import index, technology
 from app.pages.not_found import not_found
 
 

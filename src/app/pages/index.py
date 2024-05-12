@@ -1,6 +1,6 @@
 import reflex as rx
 from app.views.header import header
-from app.views.elements import langs, devops, more_soon
+from app.views.technologies import langs, devops, more_soon
 from app.views.footer import footer
 
 

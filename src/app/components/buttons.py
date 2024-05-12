@@ -3,10 +3,10 @@ from .react.icons import iconify
 from app.styles import common
 
 
-def button(element: rx.Var) -> rx.Component:
-    title = element["title"]
-    icon = element["icon"]
-    md_content = element["content"]
+def button(technology: rx.Var) -> rx.Component:
+    title = technology["title"]
+    icon = technology["icon"]
+    md_content = technology["content"]
     return rx.grid(
         rx.dialog.root(
             rx.dialog.trigger(

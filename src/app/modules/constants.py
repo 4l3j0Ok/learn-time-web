@@ -2,8 +2,8 @@ from enum import Enum
 import os
 
 
-def get_content(element: str, md_dir: str) -> str:
-    return open(f"{os.getenv('APP_PATH')}/elements/{md_dir}/{element}.md").read()
+def get_content(technology: str, md_dir: str) -> str:
+    return open(f"{os.getenv('APP_PATH')}/technologies/{md_dir}/{technology}.md").read()
 
 
 class App(Enum):
