@@ -22,6 +22,8 @@ BASE = {
     rx.dialog.content: {
         "background_color": Palette.background.value,
         "color": Palette.white.value,
+        "min_width": "min-content",
+        "scrollbar_width": "none",
     },
     rx.heading: {
         "font_family": Font.Default.value,
