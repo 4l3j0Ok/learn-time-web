@@ -1,5 +1,3 @@
-# Go
-
 Go, también conocido como Golang, es un lenguaje de programación de código abierto diseñado por Google. Destaca por su simplicidad, eficiencia y concurrencia incorporada, lo que lo hace ideal para el desarrollo de sistemas, aplicaciones web y servicios de red.
 
 ## Características

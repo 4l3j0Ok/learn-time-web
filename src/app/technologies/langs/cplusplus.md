@@ -1,5 +1,3 @@
-# C++
-
 C++ es un lenguaje de programación de propósito general, conocido por su rendimiento, flexibilidad y capacidad para desarrollar aplicaciones de alto rendimiento y sistemas complejos. Es una extensión del lenguaje de programación C, con características adicionales como la programación orientada a objetos y la manipulación segura de memoria.
 
 ## Características

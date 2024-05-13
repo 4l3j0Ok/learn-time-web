@@ -1,5 +1,3 @@
-# Kubernetes
-
 Kubernetes es una plataforma de código abierto diseñada para automatizar el despliegue, escalado y gestión de aplicaciones en contenedores. Es altamente escalable y permite a los desarrolladores gestionar y orquestar contenedores de manera eficiente en entornos de producción.
 
 ## Características

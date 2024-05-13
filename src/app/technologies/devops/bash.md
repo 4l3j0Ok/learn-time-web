@@ -1,5 +1,3 @@
-# Bash
-
 Bash, o Bourne Again Shell, es un intérprete de comandos de Unix y un lenguaje de scripting ampliamente utilizado en sistemas Unix y Linux. Es especialmente conocido por su capacidad para automatizar tareas a través de secuencias de comandos y su flexibilidad para interactuar con el sistema operativo y otros programas.
 
 ## Características

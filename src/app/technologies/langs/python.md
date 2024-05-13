@@ -1,5 +1,3 @@
-# Python
-
 Python es un lenguaje de programación de alto nivel, interpretado y generalmente fácil de aprender. Se destaca por su sintaxis clara y legible, lo que lo hace ideal tanto para principiantes como para desarrolladores experimentados. Python es un lenguaje multipropósito, lo que significa que se puede utilizar para una amplia gama de aplicaciones, desde desarrollo web y análisis de datos hasta inteligencia artificial y aprendizaje automático.
 
 ## Características

@@ -1,5 +1,3 @@
-# Rust
-
 Rust es un lenguaje de programación de sistema de alto rendimiento, diseñado para ser seguro, concurrente y práctico. Se destaca por su combinación única de seguridad y rendimiento, lo que lo hace adecuado para una variedad de aplicaciones, desde desarrollo de sistemas hasta desarrollo web y aplicaciones móviles.
 
 ## Características

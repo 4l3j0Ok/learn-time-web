@@ -1,5 +1,3 @@
-# C
-
 C es un lenguaje de programación de propósito general que es ampliamente utilizado en sistemas operativos, desarrollo de aplicaciones de bajo nivel y desarrollo de software embebido. Es conocido por su eficiencia, portabilidad y capacidad para acceder directamente al hardware de la computadora.
 
 ## Características

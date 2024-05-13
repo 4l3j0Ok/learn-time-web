@@ -1,5 +1,3 @@
-# Ruby
-
 Ruby es un lenguaje de programación interpretado, dinámico y de código abierto conocido por su simplicidad y productividad. Es utilizado principalmente en el desarrollo web y es muy apreciado por su elegancia y legibilidad de código.
 
 ## Características

@@ -1,5 +1,3 @@
-# Docker
-
 Docker es una plataforma de código abierto que permite a los desarrolladores crear, implementar y ejecutar aplicaciones en contenedores. Los contenedores son entornos livianos y portátiles que contienen todo lo necesario para ejecutar una aplicación, incluidas bibliotecas, dependencias y código, lo que garantiza que la aplicación se ejecute de manera consistente en cualquier entorno.
 
 ## Características

@@ -1,5 +1,3 @@
-# PowerShell
-
 PowerShell es un lenguaje de scripting y una interfaz de línea de comandos desarrollado por Microsoft para la administración y automatización de tareas en sistemas Windows. Es conocido por su potencia y flexibilidad, así como por su capacidad para interactuar con el sistema operativo y otros productos de Microsoft.
 
 ## Características

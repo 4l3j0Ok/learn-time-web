@@ -1,5 +1,3 @@
-# Java
-
 Java es un lenguaje de programación de alto nivel, ampliamente utilizado en el desarrollo de aplicaciones empresariales, aplicaciones móviles y software de servidor. Se destaca por su portabilidad, robustez y seguridad, lo que lo hace adecuado para una amplia variedad de aplicaciones y entornos de desarrollo.
 
 ## Características

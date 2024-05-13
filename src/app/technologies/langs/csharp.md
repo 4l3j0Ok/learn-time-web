@@ -1,5 +1,3 @@
-# C#
-
 C# es un lenguaje de programación de alto nivel, ampliamente utilizado en el desarrollo de aplicaciones empresariales, juegos y aplicaciones de escritorio. Se destaca por su robustez, rendimiento y facilidad de uso, lo que lo hace adecuado para una variedad de proyectos, desde pequeños scripts hasta sistemas complejos.
 
 ## Características

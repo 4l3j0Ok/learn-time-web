@@ -1,5 +1,3 @@
-# CI/CD
-
 CI/CD (Integración Continua / Entrega Continua) es una práctica de desarrollo de software que se centra en la automatización de los procesos de construcción, pruebas y despliegue de aplicaciones. El objetivo de CI/CD es proporcionar un flujo de trabajo eficiente y confiable que permita a los equipos de desarrollo entregar software de alta calidad de manera rápida y consistente.
 
 ## Características

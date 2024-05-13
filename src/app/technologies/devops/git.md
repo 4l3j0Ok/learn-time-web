@@ -1,5 +1,3 @@
-# Git
-
 Git es un sistema de control de versiones distribuido utilizado principalmente para el seguimiento de cambios en el código fuente durante el desarrollo de software. Es conocido por su rapidez, eficiencia y capacidad para gestionar proyectos de cualquier tamaño con facilidad.
 
 ## Características

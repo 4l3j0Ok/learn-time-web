@@ -1,5 +1,3 @@
-# PHP
-
 PHP es un lenguaje de programación de uso general, especialmente diseñado para el desarrollo de aplicaciones web dinámicas y sitios web interactivos. Es ampliamente utilizado en la creación de aplicaciones web y es conocido por su facilidad de aprendizaje y su amplia compatibilidad con diferentes sistemas operativos y servidores web.
 
 ## Características

@@ -1,5 +1,3 @@
-# Dart
-
 Dart es un lenguaje de programación desarrollado por Google, diseñado para la creación de aplicaciones móviles, web y de servidor. Dart es conocido por su sintaxis limpia y concisa, su rendimiento rápido y su capacidad para compilar a código nativo para múltiples plataformas.
 
 ## Características

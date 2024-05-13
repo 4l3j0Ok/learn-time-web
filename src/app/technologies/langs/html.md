@@ -1,5 +1,3 @@
-# HTML
-
 HTML (Hypertext Markup Language) es el lenguaje estándar utilizado para crear y diseñar páginas web. Es fundamental en el desarrollo web, ya que proporciona la estructura y el contenido básico de una página web. HTML se complementa con CSS para estilos y JavaScript para interactividad, creando así experiencias web completas y dinámicas.
 
 ## Características

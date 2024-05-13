@@ -1,5 +1,3 @@
-# TypeScript
-
 TypeScript es un lenguaje de programación de código abierto desarrollado por Microsoft que agrega tipos estáticos opcionales a JavaScript. Está diseñado para el desarrollo de aplicaciones a gran escala y es compatible con las características de JavaScript, lo que lo hace ideal para proyectos complejos y de gran envergadura.
 
 ## Características

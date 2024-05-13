@@ -1,5 +1,3 @@
-# Kotlin
-
 Kotlin es un lenguaje de programación moderno, conciso y seguro desarrollado por JetBrains. Se ejecuta en la JVM (Máquina Virtual de Java), lo que lo hace compatible con la infraestructura existente de Java y lo convierte en una opción popular para el desarrollo de aplicaciones Android, así como para aplicaciones de servidor y de escritorio.
 
 ## Características

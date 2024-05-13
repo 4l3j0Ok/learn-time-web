@@ -1,5 +1,3 @@
-# Swift
-
 Swift es un lenguaje de programación desarrollado por Apple, diseñado para desarrollar aplicaciones para iOS, macOS, watchOS y tvOS. Es un lenguaje moderno, seguro y de alto rendimiento que combina la velocidad del lenguaje C con la facilidad de uso del lenguaje Objective-C.
 
 ## Características

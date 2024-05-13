@@ -1,5 +1,3 @@
-# JavaScript
-
 JavaScript es un lenguaje de programación de alto nivel, interpretado y ampliamente conocido por su versatilidad y uso en el desarrollo web. Destaca por su capacidad para crear interactividad en páginas web y aplicaciones, y su sintaxis flexible lo hace adecuado para una variedad de proyectos, desde simples scripts hasta aplicaciones web complejas.
 
 ## Características
