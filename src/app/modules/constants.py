@@ -26,6 +26,7 @@ class Languages(Enum):
             "content": get_content("python", md_path),
             "icon": f"{Default.icon_pack.value}:python",
             "page": "/python",
+            "docs_url": "https://python.org",
         },
         "javascript": {
             "title": "JavaScript",

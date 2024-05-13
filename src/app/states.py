@@ -8,7 +8,7 @@ class TechnologiesState(rx.State):
     devops: list[dict[str, str]] = [item for item in DevOps.items.value.values()]
 
     @rx.var
-    def selected(self) -> dict:
+    def selected(self) -> dict[str, str]:
         requested = self.router.page.params.get("technology")
         data = {}
         data.update(Languages.items.value)

@@ -19,12 +19,6 @@ BASE = {
         "color": Palette.white.value,
         "font_family": Font.Default.value,
     },
-    rx.dialog.content: {
-        "background_color": Palette.background.value,
-        "color": Palette.white.value,
-        "min_width": "min-content",
-        "scrollbar_width": "none",
-    },
     rx.heading: {
         "font_family": Font.Default.value,
         "margin_y": "2em",
@@ -39,6 +33,17 @@ BASE = {
             "color": Palette.white.value,
         },
         "transition": ".3s ease-in-out",
+    },
+    rx.tabs.list: {
+        "justify_content": "space-evenly",
+        "margin_y": "1em",
+        "width": "100%",
+    },
+    rx.tabs.trigger: {
+        "flex": "auto",
+        "width": "100%",
+        "cursor": "pointer",
+        "font_size": "1em",
     },
 }
 
@@ -131,6 +136,10 @@ FOOTER = {
         "height": "auto",
         "margin_bottom": "1em",
     },
+}
+
+TABLIST = {
+    "justify_content": "space-evenly",
 }
 
 MD_COMPONENT_MAP = {
