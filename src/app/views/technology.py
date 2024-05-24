@@ -25,7 +25,7 @@ def tablist(technology: dict = None) -> rx.Component:
     return rx.tabs.root(
         rx.tabs.list(
             rx.tabs.trigger("Información", value="overview"),
-            rx.tabs.trigger(rx.text("Recomendaciones"), value="recommendations"),
+            rx.tabs.trigger("Recomendaciones", value="recommendations"),
             rx.tabs.trigger("Recursos", value="resources"),
         ),
         rx.tabs.content(

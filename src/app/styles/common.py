@@ -7,7 +7,6 @@ STYLESHEETS = [
     f"https://fonts.googleapis.com/css2?family={Font.Default.value}:ital,wght@0,100..900;1,100..900&display=swap",
     "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
 ]
-
 BASE = {
     "display": "flex",
     "flex_direction": "column",
@@ -45,6 +44,11 @@ BASE = {
         "cursor": "pointer",
         "font_size": "1em",
     },
+    "@media (hover: hover)": {
+        ".rt-TabsTrigger:where(:hover) :where(.rt-TabsTriggerInner)": {
+            "background-color": "transparent"
+        }
+    },
 }
 
 ANIMATIONS = {
@@ -77,24 +81,6 @@ LANG_BUTTON = {
     ":hover": {
         "background_color": Palette.white.value,
         "color": Palette.accent.value,
-    },
-    "transition": ".3s ease-in-out",
-}
-
-CLOSE_BUTTON = {
-    "height": "2em",
-    "width": "max-content",
-    "position": "sticky",
-    "top": "1em",
-    "margin-left": "auto",
-    "background_color": Palette.white.value,
-    "color": Palette.accent.value,
-    "overflow": "visible",
-    "cursor": "pointer",
-    "border_radius": "2em",
-    ":hover": {
-        "background_color": Palette.accent.value,
-        "color": Palette.white.value,
     },
     "transition": ".3s ease-in-out",
 }
