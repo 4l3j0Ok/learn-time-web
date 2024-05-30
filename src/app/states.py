@@ -1,5 +1,17 @@
 import reflex as rx
 from app.modules.constants import Languages, DevOps
+from typing import Union, List, Dict
+
+
+class TechnologyType(rx.Base):
+    title: str
+    content: str
+    icon: str
+    page: str
+    docs_url: str
+    courses: List[Dict[str, Union[str, bool]]]
+    youtube_channels: List[Dict[str, str]]
+    resources: List[Dict[str, str]]
 
 
 class TechnologiesState(rx.State):
@@ -8,7 +20,7 @@ class TechnologiesState(rx.State):
     devops: list[dict[str, str]] = [item for item in DevOps.items.value.values()]
 
     @rx.var
-    def selected(self) -> dict[str, str]:
+    def selected(self) -> TechnologyType:
         requested = self.router.page.params.get("technology")
         data = {}
         data.update(Languages.items.value)
