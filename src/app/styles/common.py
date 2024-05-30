@@ -7,6 +7,7 @@ STYLESHEETS = [
     f"https://fonts.googleapis.com/css2?family={Font.Default.value}:ital,wght@0,100..900;1,100..900&display=swap",
     "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
 ]
+
 BASE = {
     "display": "flex",
     "flex_direction": "column",
@@ -169,4 +170,28 @@ MD_COMPONENT_MAP = {
         style=BASE[rx.heading],
         margin_y="1em",
     ),
+}
+
+CARDS = {
+    "width": "25em",
+    "background_color": Palette.background.value,
+    "color": Palette.white.value,
+    "transition": ".3s ease-in-out",
+    ":hover": {
+        "background_color": Palette.accent.value,
+        "color": Palette.white.value,
+    },
+    "cursor": "pointer",
+    "image": {
+        "width": "100%",
+        "height": "15em",
+        "object_fit": "cover",
+    },
+}
+
+CARDS_GRID = {
+    "width": ["80vw", "80vw", "80vw", "50w", "50vw"],
+    "flex_wrap": "wrap",
+    "gap": "2em",
+    "justify_content": "center",
 }
