@@ -27,6 +27,24 @@ class Languages(Enum):
             "icon": f"{Default.icon_pack.value}:python",
             "page": "/python",
             "docs_url": "https://python.org",
+            "courses": [
+                {
+                    "title": "Ultimate Python",
+                    "author": "Hola Mundo",
+                    "image": r"https://import.cdn.thinkific.com/cdn-cgi/image/width=512,onerror=redirect/641635%2Fcustom_site_themes%2Fid%2FwzIXDCoxRXIsTJwRJE4G_aprende%20python%20ahora.jpg",
+                    "url": r"https://academia.holamundo.io/courses/ultimate-python",
+                    "is_free": False,
+                },
+                {
+                    "title": "Cursos de Python desde 0",
+                    "author": "MoureDev",
+                    "image": r"http://i3.ytimg.com/vi/Kp4Mvapo5kc/maxresdefault.jpg",
+                    "url": r"https://www.youtube.com/playlist?list=PLNdFk2_brsRdgQXLIlKBXQDeRf3qvXVU_",
+                    "is_free": True,
+                },
+            ],
+            "youtube_channels": [{}],
+            "resources": [{}],
         },
         "javascript": {
             "title": "JavaScript",
