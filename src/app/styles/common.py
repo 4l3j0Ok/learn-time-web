@@ -45,6 +45,9 @@ BASE = {
         "cursor": "pointer",
         "font_size": "1em",
     },
+    rx.tabs.content: {
+        "padding_x": "1.5em",
+    },
     "@media (hover: hover)": {
         ".rt-TabsTrigger:where(:hover) :where(.rt-TabsTriggerInner)": {
             "background-color": "transparent"
@@ -108,9 +111,9 @@ SEARCH_BAR = {
     "max_width": ["80vw", "80vw", "80vw", "50w", "50vw"],
     "margin_top": "2em",
     "rx_input": {
+        "height": "4em",
         "text_align": "center",
         "font_size": "1em",
-        "padding": "2em",
         "color": Palette.white.value,
     },
 }
@@ -123,10 +126,6 @@ FOOTER = {
         "height": "auto",
         "margin_bottom": "1em",
     },
-}
-
-TABLIST = {
-    "justify_content": "space-evenly",
 }
 
 MD_COMPONENT_MAP = {
@@ -172,8 +171,8 @@ MD_COMPONENT_MAP = {
     ),
 }
 
-CARDS = {
-    "width": "25em",
+COURSES_CARDS = {
+    "max_width": "25em",
     "background_color": Palette.background.value,
     "color": Palette.white.value,
     "transition": ".3s ease-in-out",
@@ -184,13 +183,11 @@ CARDS = {
     "cursor": "pointer",
     "image": {
         "width": "100%",
-        "height": "15em",
         "object_fit": "cover",
     },
 }
 
-CARDS_GRID = {
-    "width": ["80vw", "80vw", "80vw", "50w", "50vw"],
+COURSES_GRID = {
     "flex_wrap": "wrap",
     "gap": "2em",
     "justify_content": "center",
