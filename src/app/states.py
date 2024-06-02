@@ -8,10 +8,8 @@ class TechnologyType(rx.Base):
     content: str
     icon: str
     page: str
-    docs_url: str
-    courses: List[Dict[str, Union[str, bool]]]
-    youtube_channels: List[Dict[str, str]]
-    resources: List[Dict[str, str]]
+    courses: List[Dict[str, Union[str, bool]]] = []
+    resources: List[Dict[str, Union[str, List[Dict[str, str]]]]]
 
 
 class TechnologiesState(rx.State):

@@ -26,25 +26,35 @@ class Languages(Enum):
             "content": get_content("python", md_path),
             "icon": f"{Default.icon_pack.value}:python",
             "page": "/python",
-            "docs_url": "https://python.org",
             "courses": [
                 {
                     "title": "Ultimate Python",
                     "author": "Hola Mundo",
-                    "image": r"https://import.cdn.thinkific.com/cdn-cgi/image/width=512,onerror=redirect/641635%2Fcustom_site_themes%2Fid%2FwzIXDCoxRXIsTJwRJE4G_aprende%20python%20ahora.jpg",
+                    "image": "/images/courses/ultimate-python.webp",
                     "url": r"https://academia.holamundo.io/courses/ultimate-python",
                     "is_free": False,
                 },
                 {
                     "title": "Cursos de Python desde 0",
                     "author": "MoureDev",
-                    "image": r"http://i3.ytimg.com/vi/Kp4Mvapo5kc/maxresdefault.jpg",
+                    "image": "/images/courses/python-mouredev.webp",
                     "url": r"https://www.youtube.com/playlist?list=PLNdFk2_brsRdgQXLIlKBXQDeRf3qvXVU_",
                     "is_free": True,
                 },
+                {
+                    "title": "Qt/PySide: Interfaces Gráficas con Python",
+                    "author": "Hektor Profe",
+                    "image": "/images/courses/pyside.webp",
+                    "url": r"https://cdn.hektorprofe.net/cupon/pyside",
+                    "is_free": False,
+                },
             ],
-            "youtube_channels": [{}],
-            "resources": [{}],
+            "resources": [
+                {
+                    "docs_url": "https://python.org",
+                    "youtube_channels": [{}],
+                }
+            ],
         },
         "javascript": {
             "title": "JavaScript",
