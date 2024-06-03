@@ -43,7 +43,14 @@ def tablist(technology=None) -> rx.Component:
         rx.cond(
             technology.courses,
             rx.tabs.content(
-                courses(technology),
+                rx.grid(
+                    rx.flex(
+                        rx.foreach(
+                            technology.courses, lambda course: course_card(course)
+                        ),
+                        style=COURSES_GRID,
+                    ),
+                ),
                 value="courses",
             ),
         ),
@@ -58,38 +65,30 @@ def tablist(technology=None) -> rx.Component:
     )
 
 
-def courses(technology: TechnologyType) -> rx.Component:
-    return rx.grid(
-        rx.flex(
-            rx.foreach(
-                technology.courses,
-                lambda course: rx.link(
-                    rx.cond(
-                        course["is_free"],
-                        cards.with_badge(
-                            title=course["title"],
-                            subtitle=f"Creador: {course['author']}",
-                            image=course["image"],
-                            image_style=COURSES_CARDS["image"],
-                            badge_text="Gratuito",
-                            style=COURSES_CARDS,
-                        ),
-                        cards.simple(
-                            title=course["title"],
-                            subtitle=f"Creador: {course['author']}",
-                            image=course["image"],
-                            image_style=COURSES_CARDS["image"],
-                            style=COURSES_CARDS,
-                        ),
-                    ),
-                    href=f"{course["url"]}",
-                    is_external=True,
-                ),
+def course_card(course) -> rx.Component:
+    return rx.link(
+        rx.cond(
+            course["is_free"],
+            cards.with_badge(
+                title=course["title"],
+                subtitle=f"Creador: {course['author']}",
+                image=course["image"],
+                image_style=COURSES_CARDS["image"],
+                badge_text="Gratuito",
+                style=COURSES_CARDS,
             ),
-            style=COURSES_GRID,
+            cards.simple(
+                title=course["title"],
+                subtitle=f"Creador: {course['author']}",
+                image=course["image"],
+                image_style=COURSES_CARDS["image"],
+                style=COURSES_CARDS,
+            ),
         ),
+        href=f"{course["url"]}",
+        is_external=True,
     )
 
 
-def resources(technology) -> rx.Component:
+def resources(resources) -> rx.Component:
     return rx.box()
