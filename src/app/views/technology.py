@@ -7,9 +7,7 @@ from app.styles.common import (
     COURSES_GRID,
     RESOURCES_CARDS,
     RESOURCES_GRID,
-    ANIMATIONS,
 )
-from app.views.footer import footer
 
 
 def view(technology) -> rx.Component:
