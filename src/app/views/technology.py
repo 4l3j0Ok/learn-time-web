@@ -2,7 +2,7 @@ import reflex as rx
 from app.components.react.icons import iconify
 from app.components import cards
 from app.states import TechnologyType
-from app.styles.common import (
+from app.styles.technology import (
     COURSES_CARDS,
     COURSES_GRID,
     RESOURCES_CARDS,

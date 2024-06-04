@@ -2,7 +2,7 @@ from datetime import date
 import reflex as rx
 from app.modules.constants import App
 from app.components.logo import logo
-from app.styles.common import FOOTER
+from app.styles.footer import FOOTER
 
 
 def footer() -> rx.Component:

@@ -1,5 +1,5 @@
 import reflex as rx
-from app.views.index import view
+from app.views.finder import view
 from app.styles.common import ANIMATIONS
 from app.views.footer import footer
 

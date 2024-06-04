@@ -1,6 +1,6 @@
 import reflex as rx
 from app.states import TechnologiesState
-from app.styles.common import SEARCH_BAR
+from app.styles.finder import SEARCH_BAR
 
 
 def search_bar() -> rx.Component:

@@ -1,7 +1,7 @@
 import reflex as rx
 from app.components.buttons import button
 from app.views.search import search_bar
-from app.styles.common import ELEMENTS_GRID, HEADER_STYLE
+from app.styles.finder import TECHNOLOGY_GRID, HEADER_STYLE
 from app.modules.constants import Languages, DevOps
 from app.states import TechnologiesState
 
@@ -40,7 +40,7 @@ def langs() -> rx.Component:
                     TechnologiesState.langs,
                     lambda technology: button(technology, as_link=True),
                 ),
-                style=ELEMENTS_GRID,
+                style=TECHNOLOGY_GRID,
             ),
         ),
     )
@@ -61,7 +61,7 @@ def devops() -> rx.Component:
                         )
                     ),
                 ),
-                style=ELEMENTS_GRID,
+                style=TECHNOLOGY_GRID,
             ),
         ),
     )
