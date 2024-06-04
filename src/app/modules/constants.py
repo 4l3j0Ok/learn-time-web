@@ -51,9 +51,19 @@ class Languages(Enum):
             ],
             "resources": [
                 {
-                    "docs_url": "https://python.org",
-                    "youtube_channels": [{}],
-                }
+                    "title": "Web oficial",
+                    "description": "Visita la web oficial de Python",
+                    "url": r"https://www.python.org/",
+                    "image": "/images/resources/python-logo.webp",
+                    "icon": f"{Default.icon_pack.value}:python",
+                },
+                {
+                    "title": "Documentación oficial",
+                    "description": "Visita la documentación oficial de Python",
+                    "url": r"https://docs.python.org/",
+                    "image": "/images/resources/python-logo.webp",
+                    "icon": f"{Default.icon_pack.value}:python",
+                },
             ],
         },
         "javascript": {

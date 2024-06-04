@@ -1,18 +1,35 @@
 import reflex as rx
+from app.components.react.icons import iconify
 
 
-def simple(
+def course(
     title: str = "",
     subtitle: str = "",
     image: str = "",
     image_style: dict = {},
+    badge_text: str = "",
+    inset_side: str = "top",
     **kwargs,
 ) -> rx.Component:
     return rx.card(
+        rx.cond(
+            bool(badge_text),
+            rx.badge(
+                badge_text,
+                variant="solid",
+                position="fixed",
+                top="0",
+                right="0",
+                margin="1em",
+            ),
+        ),
         rx.inset(
-            rx.image(src=image, alt=title, style=image_style),
-            side="top",
-            pb="current",
+            rx.image(
+                src=image,
+                alt=title,
+                style=image_style,
+            ),
+            side=inset_side,
         ),
         rx.box(
             rx.heading(title, margin_y=".5em", size="5"),
@@ -22,35 +39,29 @@ def simple(
     )
 
 
-def with_badge(
+def resource(
     title: str = "",
     subtitle: str = "",
-    image: str = "",
-    badge_text: str = "",
-    image_style: dict = {},
+    icon: str = "",
+    icon_style: dict = {},
     **kwargs,
-) -> rx.Component:
+):
     return rx.card(
-        rx.badge(
-            badge_text,
-            variant="solid",
-            position="fixed",
-            top="0",
-            right="0",
-            margin="1em",
-        ),
-        rx.inset(
-            rx.image(src=image, alt=title, style=image_style),
-            side="top",
-            pb="current",
-        ),
-        rx.box(
-            rx.heading(
-                title,
-                size="5",
-                margin_y=".5em",
+        rx.flex(
+            rx.cond(
+                icon,
+                iconify(
+                    icon,
+                    style=icon_style,
+                ),
             ),
-            rx.text(subtitle),
+            rx.box(
+                rx.heading(title, margin_y=".5em", size="5"),
+                rx.text(subtitle),
+                margin_left="1.5em",
+                width="100%",
+            ),
+            height="100%",
         ),
         **kwargs,
     )

@@ -4,7 +4,6 @@ from app.views.search import search_bar
 from app.styles.common import ELEMENTS_GRID, HEADER_STYLE
 from app.modules.constants import Languages, DevOps
 from app.states import TechnologiesState
-from app.views.footer import footer
 
 
 def view() -> rx.Component:
@@ -13,7 +12,6 @@ def view() -> rx.Component:
         langs(),
         devops(),
         more_soon(),
-        footer(),
     )
 
 

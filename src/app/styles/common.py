@@ -9,6 +9,8 @@ STYLESHEETS = [
 ]
 
 BASE = {
+    "position": "relative",
+    "padding_bottom": "10em",
     "display": "flex",
     "flex_direction": "column",
     "min_height": "100vh",
@@ -120,7 +122,9 @@ SEARCH_BAR = {
 
 FOOTER = {
     "padding": "10em 0 2em 0",
-    "margin_top": "auto",
+    "bottom": "0",
+    "position": "absolute",
+    "width": "100%",
     "logo": {
         "width": "15em",
         "height": "auto",
@@ -189,6 +193,31 @@ COURSES_CARDS = {
 
 COURSES_GRID = {
     "flex_wrap": "wrap",
-    "gap": "2em",
+    "gap": "1em",
+    "justify_content": "center",
+}
+
+RESOURCES_CARDS = {
+    "width": "25em",
+    "height": "10em",
+    "padding": "1em",
+    "margin_bottom": "1em",
+    "background_color": Palette.background.value,
+    "color": Palette.white.value,
+    "transition": ".3s ease-in-out",
+    ":hover": {
+        "background_color": Palette.accent.value,
+        "color": Palette.white.value,
+    },
+    "icon": {
+        "height": "100%",
+        "width": "30%",
+    },
+    "cursor": "pointer",
+}
+
+RESOURCES_GRID = {
+    "flex_wrap": "wrap",
+    "gap": "1em",
     "justify_content": "center",
 }

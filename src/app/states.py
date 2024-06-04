@@ -8,14 +8,15 @@ class TechnologyType(rx.Base):
     content: str
     icon: str
     page: str
-    courses: List[Dict[str, Union[str, bool]]] = []
-    resources: List[Dict[str, Union[str, List[Dict[str, str]]]]]
+    docs_url: str
+    courses: List[Dict[str, Union[str, bool]]]
+    resources: List[Dict[str, str]]
 
 
 class TechnologiesState(rx.State):
     user_filter: str = ""
-    langs: list[dict[str, str]] = [item for item in Languages.items.value.values()]
-    devops: list[dict[str, str]] = [item for item in DevOps.items.value.values()]
+    langs: List[TechnologyType] = [item for item in Languages.items.value.values()]
+    devops: List[TechnologyType] = [item for item in DevOps.items.value.values()]
 
     @rx.var
     def selected(self) -> TechnologyType:
