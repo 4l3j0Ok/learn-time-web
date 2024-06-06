@@ -10,7 +10,7 @@ STYLESHEETS = [
 
 BASE = {
     "position": "relative",
-    "padding_bottom": "10em",
+    "padding_bottom": "8em",
     "display": "flex",
     "flex_direction": "column",
     "min_height": "100vh",
@@ -59,6 +59,8 @@ BASE = {
 
 ANIMATIONS = {
     "zoom_in": "animate__animated animate__zoomIn animate__faster",
+    "slide_in_left": "animate__animated animate__slideInLeft animate__faster",
+    "slide_in_right": "animate__animated animate__slideInRight animate__faster",
 }
 
 BUTTON = {
@@ -105,7 +107,7 @@ SEARCH_BAR = {
 }
 
 FOOTER = {
-    "padding": "10em 0 2em 0",
+    "padding_bottom": "2em",
     "bottom": "0",
     "position": "absolute",
     "width": "100%",
