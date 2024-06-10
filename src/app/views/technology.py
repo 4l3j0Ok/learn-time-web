@@ -1,6 +1,8 @@
 import reflex as rx
+from app.modules.constants import Misc
 from app.components.react.icons import iconify
 from app.components import cards
+from app.styles.technology import BACK_BUTTON
 from app.states import TechnologyType
 from app.styles.technology import (
     COURSES_CARDS,
@@ -17,13 +19,23 @@ def view(technology) -> rx.Component:
     )
 
 
+def back_button() -> rx.Component:
+    return rx.link(
+        iconify(Misc.back_button_icon.value, style=BACK_BUTTON),
+        href="/",
+    )
+
+
 def header(technology: TechnologyType) -> rx.Component:
-    return rx.grid(
-        rx.heading(
-            iconify(technology.icon, display="inline"),
-            " ",
-            technology.title,
-            text_align="center",
+    return rx.box(
+        back_button(),
+        rx.grid(
+            rx.heading(
+                iconify(technology.icon, display="inline"),
+                " ",
+                technology.title,
+                text_align="center",
+            ),
         ),
     )
 

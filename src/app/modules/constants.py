@@ -13,10 +13,15 @@ class App(Enum):
     url = os.getenv("APP_URL", "https://learn.alejoide.com")
 
 
+class Misc(Enum):
+    back_button_icon = "ion:caret-back-outline"
+
+
 class Default(Enum):
     icon_pack = "simple-icons"
 
 
+# Technologies
 class Languages(Enum):
     title = "Lenguajes"
     md_path = "langs"

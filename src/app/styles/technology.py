@@ -47,3 +47,22 @@ RESOURCES_GRID = {
     "gap": "1em",
     "justify_content": "center",
 }
+
+BACK_BUTTON = {
+    "position": "absolute",
+    "margin": "2em",
+    "left": "0",
+    "height": "4em",
+    "width": "4em",
+    "padding": ".5em",
+    "border_radius": "50%",
+    "background_color": Palette.accent.value,
+    "color": Palette.white.value,
+    "overflow": "visible",
+    "cursor": "pointer",
+    ":hover": {
+        "background_color": Palette.white.value,
+        "color": Palette.accent.value,
+    },
+    "transition": ".3s ease-in-out",
+}

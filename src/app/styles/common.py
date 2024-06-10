@@ -84,16 +84,6 @@ ELEMENTS_GRID = {
     "justify_content": "center",
 }
 
-HEADER_STYLE = {
-    "text_align": "center",
-    "margin_top": "5em",
-    "margin_bottom": "2em",
-    "rx_heading": {
-        "font_size": ["3em", "5em"],
-        "margin_y": ".25em",
-    },
-}
-
 SEARCH_BAR = {
     "width": "100%",
     "max_width": ["80vw", "80vw", "80vw", "50w", "50vw"],
