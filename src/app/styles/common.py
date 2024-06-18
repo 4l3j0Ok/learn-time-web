@@ -9,6 +9,8 @@ STYLESHEETS = [
 ]
 
 BASE = {
+    "position": "relative",
+    "padding_bottom": "8em",
     "display": "flex",
     "flex_direction": "column",
     "min_height": "100vh",
@@ -18,12 +20,6 @@ BASE = {
     rx.text: {
         "color": Palette.white.value,
         "font_family": Font.Default.value,
-    },
-    rx.dialog.content: {
-        "background_color": Palette.background.value,
-        "color": Palette.white.value,
-        "min_width": "inherit",
-        "scrollbar_width": "none",
     },
     rx.heading: {
         "font_family": Font.Default.value,
@@ -40,10 +36,34 @@ BASE = {
         },
         "transition": ".3s ease-in-out",
     },
+    rx.tabs.list: {
+        "justify_content": "space-evenly",
+        "margin_y": "1em",
+        "width": "100%",
+    },
+    rx.tabs.trigger: {
+        "flex": "auto",
+        "width": "100%",
+        "cursor": "pointer",
+        "font_size": "1em",
+    },
+    rx.tabs.content: {
+        "padding_x": "1.5em",
+    },
+    "@media (hover: hover)": {
+        ".rt-TabsTrigger:where(:hover) :where(.rt-TabsTriggerInner)": {
+            "background-color": "transparent"
+        }
+    },
 }
 
 ANIMATIONS = {
     "zoom_in": "animate__animated animate__zoomIn animate__faster",
+    "zoom_out": "animate__animated animate__zoomOut animate__faster",
+    "slide_in_left": "animate__animated animate__slideInLeft animate__faster",
+    "slide_in_right": "animate__animated animate__slideInRight animate__faster",
+    "fade_in": "animate__animated animate__fadeIn animate__slow",
+    "fade_out": "animate__animated animate__fadeOut animate__slow",
 }
 
 BUTTON = {
@@ -60,40 +80,6 @@ BUTTON = {
     "transition": ".3s ease-in-out",
 }
 
-LANG_BUTTON = {
-    "width": "5em",
-    "height": "5em",
-    "border_radius": "50%",
-    "background_color": Palette.accent.value,
-    "color": Palette.white.value,
-    "padding": "1em",
-    "overflow": "visible",
-    "cursor": "pointer",
-    ":hover": {
-        "background_color": Palette.white.value,
-        "color": Palette.accent.value,
-    },
-    "transition": ".3s ease-in-out",
-}
-
-CLOSE_BUTTON = {
-    "height": "2em",
-    "width": "max-content",
-    "position": "sticky",
-    "top": "1em",
-    "margin-left": "auto",
-    "background_color": Palette.white.value,
-    "color": Palette.accent.value,
-    "overflow": "visible",
-    "cursor": "pointer",
-    "border_radius": "2em",
-    ":hover": {
-        "background_color": Palette.accent.value,
-        "color": Palette.white.value,
-    },
-    "transition": ".3s ease-in-out",
-}
-
 ELEMENTS_GRID = {
     "width": ["80vw", "80vw", "80vw", "50w", "50vw"],
     "flex_wrap": "wrap",
@@ -101,31 +87,23 @@ ELEMENTS_GRID = {
     "justify_content": "center",
 }
 
-HEADER_STYLE = {
-    "text_align": "center",
-    "margin_top": "5em",
-    "margin_bottom": "2em",
-    "rx_heading": {
-        "font_size": ["3em", "5em"],
-        "margin_y": ".25em",
-    },
-}
-
 SEARCH_BAR = {
     "width": "100%",
     "max_width": ["80vw", "80vw", "80vw", "50w", "50vw"],
     "margin_top": "2em",
     "rx_input": {
+        "height": "4em",
         "text_align": "center",
         "font_size": "1em",
-        "padding": "2em",
         "color": Palette.white.value,
     },
 }
 
 FOOTER = {
-    "padding": "10em 0 2em 0",
-    "margin_top": "auto",
+    "padding_bottom": "2em",
+    "bottom": "0",
+    "position": "absolute",
+    "width": "100%",
     "logo": {
         "width": "15em",
         "height": "auto",

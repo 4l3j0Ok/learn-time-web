@@ -1,5 +1,6 @@
 import reflex as rx
 from app.styles.common import BUTTON
+from app.styles.common import ANIMATIONS
 
 
 def not_found() -> rx.Component:
@@ -8,8 +9,12 @@ def not_found() -> rx.Component:
             rx.heading("404", margin_y="0", font_size="5em"),
             rx.heading("Página no encontrada.", margin_top="1.5em", size="4"),
             rx.text("La página que buscas no existe."),
-            rx.link("Volver al inicio", href="/", margin_top="3em", style=BUTTON),
+            rx.link(
+                rx.box("Volver al inicio", margin_top="3em", style=BUTTON),
+                href="/",
+            ),
         ),
-        height="100vh",
-        width="100vw",
+        height="80vh",
+        width="100%",
+        class_name=ANIMATIONS.get("fade_in"),
     )
