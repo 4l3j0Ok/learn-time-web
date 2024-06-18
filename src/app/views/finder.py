@@ -48,18 +48,13 @@ def langs() -> rx.Component:
 
 def devops() -> rx.Component:
     return rx.cond(
-        TechnologiesState.devops,
+        TechnologiesState.langs,
         rx.grid(
             rx.heading(DevOps.title.value),
             rx.flex(
                 rx.foreach(
                     TechnologiesState.devops,
-                    lambda technology: rx.box(
-                        button(
-                            technology,
-                            **DevOps.items.value.get(f"{technology}", {}),
-                        )
-                    ),
+                    lambda technology: button(technology, as_link=True),
                 ),
                 style=TECHNOLOGY_GRID,
             ),

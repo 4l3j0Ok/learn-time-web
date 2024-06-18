@@ -9,6 +9,9 @@ def get_content(technology: str, md_dir: str) -> str:
 class App(Enum):
     name = "Learn Time"
     author = "Alejo Sarmiento"
+    nickname = "Alejoide"
+    name_with_nick = f"{name} by {nickname}"
+    name_with_author = f"{name} by {author}"
     version = "v1"
     url = os.getenv("APP_URL", "https://learn.alejoide.com")
 
