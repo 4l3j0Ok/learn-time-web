@@ -59,8 +59,11 @@ BASE = {
 
 ANIMATIONS = {
     "zoom_in": "animate__animated animate__zoomIn animate__faster",
+    "zoom_out": "animate__animated animate__zoomOut animate__faster",
     "slide_in_left": "animate__animated animate__slideInLeft animate__faster",
     "slide_in_right": "animate__animated animate__slideInRight animate__faster",
+    "fade_in": "animate__animated animate__fadeIn animate__slow",
+    "fade_out": "animate__animated animate__fadeOut animate__slow",
 }
 
 BUTTON = {

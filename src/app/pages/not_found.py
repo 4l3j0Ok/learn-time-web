@@ -1,5 +1,6 @@
 import reflex as rx
 from app.styles.common import BUTTON
+from app.styles.common import ANIMATIONS
 
 
 def not_found() -> rx.Component:
@@ -15,4 +16,5 @@ def not_found() -> rx.Component:
         ),
         height="80vh",
         width="100%",
+        class_name=ANIMATIONS.get("fade_in"),
     )
